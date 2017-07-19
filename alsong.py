@@ -1,6 +1,19 @@
 import requests
 import HTMLParser
 
+"""
+python 3.4 Version or later
+import html
+def unescape(data):
+	return html.unescape(data)
+
+python 3.3 Version or below
+import html.parser
+def unescape(data):
+	parser = html.parser.HTMLParser()
+	return parser.unescape(data)
+"""
+# For python 2.7
 def unescape(data):
 	parser = HTMLParser.HTMLParser()
 	return parser.unescape(data)

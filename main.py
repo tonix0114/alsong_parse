@@ -10,7 +10,9 @@ def main():
 		artist = sys.argv[2]
 		songs = alsong.parse(title, artist, tag_keywords)
 		for song in songs:
-			print song["id"], song["title"], song["artist"]
+			for t in song["text"]:
+				print t
+				exit()
 	else:
 		print "input sjgdjdy"
 if __name__ == '__main__':
